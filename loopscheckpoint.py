@@ -35,14 +35,14 @@ print (len(scores))
 print ("TASK 2")
 print(scores[0])
 print(scores[2])
-print(scores[-1])  
+print(scores[4])  
 
 # TASK 3:
 # Change the third element of scores to 100.
 # Print the updated list. Do not create a replacement list.
 print ("TASK 3")
-scores[3] = 100
-print (scores [2])
+scores[2] = 100
+print (scores)
 
 # TASK 4:
 # Create games = ["Minecraft", "Roblox", "Fortnite"].
@@ -369,6 +369,15 @@ print("Count:", count)
 # Use 'in' to print "Available" or "Not available".
 # Do NOT use index() to search.
 
+
+
+# answer to question on new info
+# in checks if a value is inside a list.
+# not in checks if a value is not inside a list.
+# They can be used in if statements and while loops
+# to check whether something exists in a list.
+
+
 print ("TASK 25")
 foods = ["pizza", "burger", "tacos", "sushi", "pasta"]
 
@@ -424,7 +433,8 @@ else:
 # is NOT in accounts. Append the accepted name and print accounts.
 # REQUIREMENT: Use 'not in' in your solution.
 
-print ("TASK 28")
+print("TASK 28")
+
 accounts = ["admin", "guest"]
 
 name = input("Enter a new account name: ")
@@ -433,7 +443,8 @@ while name in accounts:
     print("Name already taken. Try again.")
     name = input("Enter a new account name: ")
 
-accounts.append(name)
+if name not in accounts:
+    accounts.append(name)
 
 print(accounts)
 
@@ -470,10 +481,10 @@ print("Number of guesses:", guesses)
 # Print the finished list and its length.
 
 print ("TASK 30")
-guests = ["Lauren", "Jonah", "Alberto","Jonny", "Uli" ]
+guests = []
 
 while len(guests) < 5:
-    name = input("Enter a guest name: ")
+    name = input("Enter 5 unique guest name: ")
 
     if name not in guests:
         guests.append(name)
@@ -494,7 +505,7 @@ print("Number of guests:", len(guests))
 # Do NOT use count().
 # Test: count_positive([-2, 0, 4, 9, -1]) -> 2
 
-("TASK 31")
+print("TASK 31")
 def count_positive(numbers):
     total = 0
 
